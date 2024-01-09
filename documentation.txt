@@ -1,0 +1,102 @@
+Part 1: Setting up the Development Environment
+Setting up Laravel
+Installing PHP and Composer.
+Installing Laravel Installer.
+Creating a new Laravel project.
+Setting up Vue.js
+Installing Node.js and npm.
+Adding Vue.js to the Laravel project using Laravel Mix or creating a separate Vue.js project.
+Configuring Laravel for API development
+Setting up the database.
+Setting up Laravel Sanctum for API Authentication
+
+Part 2: Building the REST API with Laravel
+Designing the Database Schema
+Design the tables and relationships.
+Building the API
+Creating migrations and models.
+Setting up API Routes.
+Building API controllers and defining CRUD operations.
+Validating request data.
+Implementing authentication using tokens.
+Testing API endpoints using Postman or another REST client.
+
+
+Part 3: Building the Frontend with Vue.js
+Introduction to Vue.js
+Basic concepts: Components, Directives, Events.
+Setting up Vue.js in the Project
+Installing necessary dependencies.
+Configuring webpack with Laravel Mix if using in the same project.
+Building Components
+Creating Vue.js components for different UI elements.
+Communicating with the API
+Making HTTP requests to the Laravel API using axios or another HTTP client.
+Handling responses and rendering data on the frontend.
+User Authentication
+Building a login component.
+Implementing Authentication with the API.
+Protecting routes and handling authentication state.
+
+
+Part 4: Bringing it All Together
+Integrating Frontend and Backend
+Make sure the Vue.js frontend can communicate with the Laravel API.
+Error Handling
+Implement proper error handling on both the frontend and backend.
+Deployment
+Guide on deploying the full-stack application.
+Suggestions for hosting services.
+Conclusion
+Recap of what was learned.
+Suggestions for further improvement and learning.
+
+
+Part 1: Setting up the Development Environment For Laravel 10
+In this part let’s start with Laravel for the backend. Before we begin, ensure that you have PHP installed on your system, as Laravel is a PHP framework. You will also need Composer, which is a dependency manager for PHP.
+
+Step 1: Install Laravel
+First, let’s install Laravel using Composer. Open your terminal and enter the following command:
+
+composer global require laravel/installer
+PHP
+
+This command will install the Laravel installer globally on your system.
+
+Step 2: Create a New Laravel Project
+Now, let’s create a new Laravel project. Run the following command, replacing your_project_name with the desired project name:
+
+laravel new EcommerceApp
+PHP
+
+This command creates a new directory with your project name and installs a fresh Laravel installation in that directory.
+
+Step 3: Running the Laravel Application
+Navigate to the newly created project directory:
+
+cd EcommerceApp
+PHP
+
+Now, let’s run the Laravel development server:
+
+php artisan serve
+PHP
+
+You should see an output indicating that the server is running. By default, it runs on http://127.0.0.1:8000. Open this URL in your web browser to see the Laravel welcome page.
+
+Step 5: Setting Up a Database
+Let’s set up a database for our application. You can use any database that Laravel supports. In this tutorial, we’ll use MySQL. You can create a new database using phpMyAdmin or the command line.
+
+After creating the database, open the .env file in the root of your Laravel project. Update the following lines with your database connection information:
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=ecommerceapp
+DB_USERNAME=root
+DB_PASSWORD=
+PHP
+
+Now, let’s run the migrations to create the necessary tables:
+
+php artisan migrate
